@@ -10,7 +10,7 @@ const Navbar = () => {
       <MaxWidthWrapper>
         <div className="flex h-14 items-center justify-between border-b border-zinc-200">
           <Link href="/" className="flex z-40 font-semibold">
-            <span>HARTdraws</span>
+            <span className="">HARTdraws</span>
           </Link>
 
           {/* Mobile Navbar Configuration */}
@@ -28,8 +28,13 @@ const Navbar = () => {
               >
                 Sign In
               </LoginLink>
-              <RegisterLink className={buttonVariants({ size: "sm" })}>
-                Get Started Today
+              <RegisterLink
+                className={buttonVariants({
+                  size: "sm",
+                  className: "bg-black",
+                })}
+              >
+                Sign Up
                 <Sparkles fill="white" className="ml-1.5 w-4" />
               </RegisterLink>
             </>
