@@ -7,12 +7,11 @@ export const appRouter = router({
     const { getUser } = getKindeServerSession();
     const user = getUser();
 
-    if (!user.id || !user.email) throw new TRPCError({ code: "UNAUTHORIZED" });
+    if (!user) throw new TRPCError({ code: "UNAUTHORIZED" });
 
     //check if user in DB
+    return { success: true };
   }),
 });
 
 export type AppRouter = typeof appRouter;
-
-//2.06.11

@@ -23,6 +23,13 @@ then,
 
 ![alt text](image.png)
 
+# Dashboard
+
+- my files
+- upload pdf button
+- list of files of user
+- delete files icon per pdf
+
 # tRPC
 
 - helps ensuring data type is right which is very imp for Typescript

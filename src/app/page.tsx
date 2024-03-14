@@ -16,7 +16,8 @@ export default function Home() {
             </p>
           </div>
           <h1 className="max-w-4xl text-5xl font-bold md:text-6xl lg:text-7xl">
-            Get the most from your <span className="text-white">Documents</span>
+            Get the most from your{" "}
+            <span className="text-violet-700">Documents</span>
           </h1>
           <p className="mt-5 justify-center max-w-2xl sm:ml-40 text-zinc-700 sm:text-lg text-center">
             <span className="font-bold text-black">HART</span>draws allows you
@@ -166,5 +167,3 @@ export default function Home() {
     </>
   );
 }
-
-//56:49
