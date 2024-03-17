@@ -2,7 +2,7 @@ import React, { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 const MaxWidthWrapper = ({
-  //props
+  //props to be passed
   classname,
   children,
 }: {

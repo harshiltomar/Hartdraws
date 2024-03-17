@@ -102,13 +102,13 @@ export default function Home() {
           <li className="md:flex-1">
             <div className="flex flex-col space-y-2 border-l-4 border-zinc-300 py-2 pl-4 md:border-l-0 md:border-t-2 md:pb-0 md:pl-0 md:pt-4">
               <span className="text-sm font-medium text-violet-700">
-                Step 1
+                Step 1 &rarr;
               </span>
               <span className="text-xl font-semibold">
                 Sign up for an Account
               </span>
               <span className="mt-2 text-zinc-700">
-                Either starting out with a free plan or chose our{" "}
+                Either starting out with a free plan or choose our{" "}
                 <Link
                   href="/pricing"
                   className="text-violet-700 underline underline-offset-2"
@@ -121,7 +121,7 @@ export default function Home() {
           <li className="md:flex-1">
             <div className="flex flex-col space-y-2 border-l-4 border-zinc-300 py-2 pl-4 md:border-l-0 md:border-t-2 md:pb-0 md:pl-0 md:pt-4">
               <span className="text-sm font-medium text-violet-700">
-                Step 2
+                Step 2 &rarr;
               </span>
               <span className="text-xl font-semibold">
                 Upload your PDF Files
@@ -134,7 +134,7 @@ export default function Home() {
           <li className="md:flex-1">
             <div className="flex flex-col space-y-2 border-l-4 border-zinc-300 py-2 pl-4 md:border-l-0 md:border-t-2 md:pb-0 md:pl-0 md:pt-4">
               <span className="text-sm font-medium text-violet-700">
-                Step 3
+                Step 3 &rarr;
               </span>
               <span className="text-xl font-semibold">Let&apos;s ball !</span>
               <span className="mt-2 text-zinc-700">

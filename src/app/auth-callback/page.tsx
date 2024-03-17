@@ -1,22 +1,40 @@
 "use client";
 
-import { useSearchParams, useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { trpc } from "../_trpc/client";
+import { Loader2 } from "lucide-react";
 
-const Page = async () => {
+const Page = () => {
   const router = useRouter();
 
   const searchParams = useSearchParams();
   const origin = searchParams.get("origin");
 
-  const apiResponse = await fetch("/api/whatever");
-
-  //used to destructure data with typesafety
-  const { data, isLoading } = trpc.authCallback.useQuery(undefined, {
-    onSuccess: () => {},
+  trpc.authCallback.useQuery(undefined, {
+    // onSuccess: ({ success: any }) => {
+    //   if (success) {
+    //     // user is synced to db
+    //     router.push(origin ? `/${origin}` : '/dashboard')
+    //   }
+    // },
+    // onError: (error: any) => {
+    //   if (error.data?.code === 'UNAUTHORIZED') {
+    //     router.push('/sign-in')
+    //   }
+    // },
+    retry: true,
+    retryDelay: 500,
   });
+
+  return (
+    <div className="w-full mt-24 flex justify-center">
+      <div className="flex flex-col items-center gap-2">
+        <Loader2 className="h-8 w-8 animate-spin text-zinc-800" />
+        <h3 className="font-semibold text-xl">Setting up your account...</h3>
+        <p>You will be redirected automatically.</p>
+      </div>
+    </div>
+  );
 };
 
 export default Page;
-
-//2.04.42
