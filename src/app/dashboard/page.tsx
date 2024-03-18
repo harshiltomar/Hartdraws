@@ -10,7 +10,7 @@ const Page = () => {
   console.log("working");
   const user = getUser();
 
-  if (!user) redirect("/auth-callback?origin=dashboard");
+  //if (!user) redirect("/auth-callback?origin=dashboard");
 
   return <Dashboard />;
 };
