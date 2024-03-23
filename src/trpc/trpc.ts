@@ -8,7 +8,7 @@ const isAuth = middleware(async (opts) => {
   const { getUser } = getKindeServerSession();
   const user = await getUser();
 
-  if (!user) {
+  if (!user || !user.email) {
     throw new TRPCError({ code: "UNAUTHORIZED" });
   }
 
